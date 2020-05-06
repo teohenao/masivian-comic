@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComicsService } from 'src/app/services/comics.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private comicsService:ComicsService) { }
 
   ngOnInit() {
+      this.comicsService.getComit(606).subscribe(res=>{
+        console.log(res)
+      })
   }
 
 }

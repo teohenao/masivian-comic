@@ -7,8 +7,6 @@ import { PrincipalComponent } from './component/principal/principal.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

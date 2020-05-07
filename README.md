@@ -1,7 +1,7 @@
 # Mateo Henao Rodriguez 08 mayo 2020
 # PruebaMasivian
 
-##NOTA IMPORTANTE
+## NOTA IMPORTANTE
 
 antes de realizar la instalacion del proyecto se debe  instalar una extension para desbloquear el cors, esto se presenta gracias a que nuestro servidor no esta registrado en los accesos del servicio back, lo que hace el desbloqueador de cors es que podemos realizar pruebas sin tener esa autorizacion.
 https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino

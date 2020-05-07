@@ -1,14 +1,20 @@
 # Mateo Henao Rodriguez 08 mayo 2020
 # PruebaMasivian
 
+##NOTA IMPORTANTE
+
+antes de realizar la instalacion del proyecto se debe  instalar una extension para desbloquear el cors, esto se presenta gracias a que nuestro servidor no esta registrado en los accesos del servicio back, lo que hace el desbloqueador de cors es que podemos realizar pruebas sin tener esa autorizacion.
+https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino
+uno de las extensiones de chrome que permite esto es CORS Unlock despues de instalarla activarla y proceder.
 
 ## instalar librerias de angular del package node_modules
 
-Para instalar las librerias se ingresa a la raiz del proyecto, se abre la consola y ejecuta "npm i" que viene de npm install
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para instalar las librerias se ingresa a la raiz del proyecto, se abre la consola y ejecuta "npm i" que viene de npm install.
 
 ## Correr el servidor
 Para correr el servidor y ver la aplicacion, en la consola raiz del proyecto ingresamos "ng serve" o "ng serve -o" el -o es para que se abra el navegador ya en la vista predeterminada.
+
+navegar hacia `http://localhost:4200/` dado el caso de que no se escriba el -o.
 
 ## Como iteractuar 
 

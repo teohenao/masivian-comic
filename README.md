@@ -1,27 +1,26 @@
+# Mateo Henao Rodriguez 08 mayo 2020
 # PruebaMasivian
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+## NOTA IMPORTANTE
 
-## Development server
+antes de realizar la instalacion del proyecto se debe  instalar una extension para desbloquear el cors, esto se presenta gracias a que nuestro servidor no esta registrado en los accesos del servicio back, lo que hace el desbloqueador de cors es que podemos realizar pruebas sin tener esa autorizacion.
+https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino
+uno de las extensiones de chrome que permite esto es CORS Unlock despues de instalarla activarla y proceder.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## instalar librerias de angular del package node_modules
 
-## Code scaffolding
+Para instalar las librerias se ingresa a la raiz del proyecto, se abre la consola y ejecuta "npm i" que viene de npm install.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Correr el servidor
+Para correr el servidor y ver la aplicacion, en la consola raiz del proyecto ingresamos "ng serve" o "ng serve -o" el -o es para que se abra el navegador ya en la vista predeterminada.
 
-## Build
+navegar hacia `http://localhost:4200/` dado el caso de que no se escriba el -o.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Como iteractuar 
 
-## Running unit tests
+despues de correr el servidor el abre por defecto la pagina, iteraciones que alli se pueden hacer son:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. al ingresar a la pagina por primera vez se carga un comic aleatorio con sus estrellas vacias para realizar la calificacion
+2. se puede observar el comic y algunos detalles
+3. si se selecciona alguna estrella queda seleccionada y aparece un mensaje que le dice que calificacion le ha dado al comic
+4. boton de comic random para que sin necesidad de refrescar la pagina el pueda cambiar de comic para calificarlo

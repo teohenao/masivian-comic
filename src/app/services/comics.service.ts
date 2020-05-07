@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Comic } from '../models/comic';
 
 
 @Injectable({
@@ -12,8 +13,8 @@ export class ComicsService {
 
   constructor(private http:HttpClient) { }
 
-  getComit(numberComic:number):Observable<any>{
-    return this.http.get(this.urlEndPoint+numberComic+'/info.0.json');
+  getComit(numberComic:number):Observable<Comic>{
+    return this.http.get<Comic>(this.urlEndPoint+numberComic+'/info.0.json');
   }
 
 }

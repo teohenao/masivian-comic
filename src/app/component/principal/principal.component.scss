@@ -1,30 +1,74 @@
+$color-white:#ffff;
+$stars: 5;
+$star-size: 40px;
+$star-spacing: 1px;
+$star-on-color: #F9DF4A;
+$star-off-color: #CCCCCC;
 
 .container{
     padding-top: 70px;
     padding-bottom: 70px;
     align-items: center;
     display: flex;
-    justify-content: center;
+	justify-content: center;
+	
     .comic {
-        background-color: white;
+        text-align: center;
+        background-color: $color-white;
         height: 100%;
         width: 500px;
-        border-radius: 15px;
-        .title{
-            padding: 10px;
-        }
-        .date{
-            #published{
-                padding-left: 20px;
-            }
-            #date-published{
-                color: blue;
-            }
-        }
-        img{
-            padding: 20px;
-        }
+		border-radius: 15px;
+		display: inline-block;
 
+		.comic-title{padding-top: 20px;font-family:"Comic Sans MS", cursive, sans-serif;}
+		
+		img{padding: 20px;}
+		
+		.comic-alt{
+		   p{
+			padding: 15px;
+	      }
+		}
     }
+}  
+
+.comic_rating {
+	width:70%;
+	height: $star-size;
+    align-items: center;
+	justify-content: center;
+	
+	label {
+		float: right;
+		position: relative;
+		width: $star-size;
+		height: $star-size;
+        cursor: pointer;
+
+		&:not(:first-of-type) { padding-right: $star-spacing; }
+		
+		&:before {
+			content: "\2605";
+			font-size: $star-size + 2px;
+			color: $star-off-color;
+			line-height: 1;
+		}
+	}
+
+	input {
+		display: none;
+	}
+
+	input:checked ~ label:before,
+	&:not(:checked) > label:hover:before,
+	&:not(:checked) > label:hover ~ label:before { color: $star-on-color; }
 }
 
+.card { box-shadow: 0 16px 6px rgba(0,0,0,0.16), 0 10px 30px rgba(0,0,0,1); }
+.text-divider{ margin: 1em 0; line-height: 0; text-align: center;}
+.text-divider span{background-color: $color-white; padding: 0.5em;}
+.text-divider:before{ content: " "; display: block; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #f7f7f7;}
+
+
+
+  

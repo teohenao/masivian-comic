@@ -1,3 +1,4 @@
+//Modelo o entidad de Comic
 export class Comic{
     alt:string;
     day:string;

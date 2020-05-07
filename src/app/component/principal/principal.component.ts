@@ -3,10 +3,6 @@ import { ComicsService } from 'src/app/services/comics.service';
 import { Comic } from 'src/app/models/comic';
 import Swal from 'sweetalert2';
 
-
-declare const STABLE_FEATURE: boolean;
-declare const EXPERIMENTAL_FEATURE: boolean;
-
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
@@ -14,8 +10,6 @@ declare const EXPERIMENTAL_FEATURE: boolean;
 })
 export class PrincipalComponent implements OnInit {
 
-  stableFeature: string;
-  experimentalFeature: string;
   comic:Comic;
   rating:boolean=false;
 
@@ -23,10 +17,9 @@ export class PrincipalComponent implements OnInit {
 
   ngOnInit() {
     this.comicRandom()
-    this.stableFeature = STABLE_FEATURE ? 'Stable feature enabled' : 'Stable feature disabled';
-    this.experimentalFeature = EXPERIMENTAL_FEATURE ? 'Experimental feature enabled' : 'Experimental feature disabled';
   }
-
+  
+  //Metodo que se ejecuta al usuario seleccionar una estrella realizando asi la calificacion
   ratingComic(r:number){
     Swal.fire({
       position: 'center',
@@ -37,6 +30,7 @@ export class PrincipalComponent implements OnInit {
     })
   }
 
+  //metodo que consume el servicio que trae un comic aleatorio
   comicRandom(){
     this.rating = false;
     let random= Math.floor(Math.random() * 2302) + 1  

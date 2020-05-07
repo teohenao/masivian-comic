@@ -1,13 +1,19 @@
+
 $color-white:#ffff;
 $stars: 5;
 $star-size: 40px;
 $star-spacing: 1px;
 $star-on-color: #F9DF4A;
 $star-off-color: #CCCCCC;
+$p-container:70px;
+$font-comic:"Comic Sans MS", cursive, sans-serif;
+$shadow-comic:0 16px 6px rgba(0,0,0,0.16), 0 10px 30px rgba(0,0,0,1);
+$btn-green:#69E954;
+$text-black:black;
 
 .container{
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: $p-container;
+    padding-bottom: $p-container;
     align-items: center;
     display: flex;
 	justify-content: center;
@@ -20,7 +26,7 @@ $star-off-color: #CCCCCC;
 		border-radius: 15px;
 		display: inline-block;
 
-		.comic-title{padding-top: 20px;font-family:"Comic Sans MS", cursive, sans-serif;}
+		.comic-title{padding-top: 20px;font-family:$font-comic;}
 		
 		img{padding: 20px;}
 		
@@ -29,6 +35,7 @@ $star-off-color: #CCCCCC;
 			width:200px;
 			height: $star-size;
 			margin: 0 auto;
+
 			label {
 				float: right;
 				position: relative;
@@ -46,37 +53,30 @@ $star-off-color: #CCCCCC;
 				}
 			}
 		
-			input {
-				display: none;
-			}
-		
+			input { display: none;}
 			input:checked ~ label:before,
 			&:not(:checked) > label:hover:before,
 			&:not(:checked) > label:hover ~ label:before { color: $star-on-color; }
 		}
 		
-		.comic-alt{
-		   p{
-			padding: 15px;
-	      }
-		}
-		.comic-random{
-			.btn-random{
+		.comic-alt{ p { padding: 15px; } }
+		.comic-random{ .btn-random{
 				border-radius: 10px;
 				margin: 20px;
-				background-color: #69E954; 
-				color: black;
+				background-color: $btn-green; 
+				color: $text-black;
 				font-size: 20px;
 			}
 		}
     }
 }  
 
+.card { box-shadow:$shadow-comic}
 
-
-.card { box-shadow: 0 16px 6px rgba(0,0,0,0.16), 0 10px 30px rgba(0,0,0,1); }
 .text-divider{ margin: 1em 0; line-height: 0; text-align: center;}
+
 .text-divider span{background-color: $color-white; padding: 0.5em;}
+
 .text-divider:before{ content: " "; display: block; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #f7f7f7;}
 
 

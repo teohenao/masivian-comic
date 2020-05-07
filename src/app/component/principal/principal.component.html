@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="comic card">
+  <div class="comic card" *ngIf="!rating">
+   <img src="../../../assets/images/loading.svg">
+  </div>
+  <div class="comic card" *ngIf="rating">
     <div class="comic-title">
       <h1>{{comic.title}}</h1>
     </div>
@@ -10,16 +13,18 @@
     <div class="comic-image">
       <img src="{{comic.img}}" width="auto" height="auto">
     </div>
-      <div class="comic_rating">
-        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
-        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
-        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
-        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
-        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
-      </div>
-  
+    <div class="comic-rating">
+      <input type="radio" id="star5" name="rating" value="5" (click)="ratingComic(5)" /><label for="star5"></label>
+      <input type="radio" id="star4" name="rating" value="4" (click)="ratingComic(4)" /><label for="star4"></label>
+      <input type="radio" id="star3" name="rating" value="3" (click)="ratingComic(3)" /><label for="star3"></label>
+      <input type="radio" id="star2" name="rating" value="2" (click)="ratingComic(2)" /><label for="star2"></label>
+      <input type="radio" id="star1" name="rating" value="1" (click)="ratingComic(1)" /><label for="star1"></label>
+    </div>
     <div class="comic-alt">
       <p>{{comic.alt}}</p>
+    </div>
+    <div class="comic-random">
+      <button class="btn-random" (click)="comicRandom()">comic random</button>
     </div>
   </div>
 </div>

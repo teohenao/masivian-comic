@@ -15,7 +15,7 @@ export class PrincipalComponent implements OnInit {
 
   ngOnInit() {
     this.comic = new Comic();
-      this.comicsService.getComit(603).subscribe(res=>{
+      this.comicsService.getComit(611).subscribe(res=>{
        this.comic = res;
        console.log(this.comic)
       })

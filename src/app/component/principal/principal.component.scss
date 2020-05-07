@@ -16,13 +16,44 @@ $star-off-color: #CCCCCC;
         text-align: center;
         background-color: $color-white;
         height: 100%;
-        width: 500px;
+        min-width: auto;
 		border-radius: 15px;
 		display: inline-block;
 
 		.comic-title{padding-top: 20px;font-family:"Comic Sans MS", cursive, sans-serif;}
 		
 		img{padding: 20px;}
+		
+		.comic_rating {
+			padding-bottom: 10px;
+			width:200px;
+			height: $star-size;
+			margin: 0 auto;
+			label {
+				float: right;
+				position: relative;
+				width: $star-size;
+				height: $star-size;
+				cursor: pointer;
+		
+				&:not(:first-of-type) { padding-right: $star-spacing; }
+				
+				&:before {
+					content: "\2605";
+					font-size: $star-size + 2px;
+					color: $star-off-color;
+					line-height: 1;
+				}
+			}
+		
+			input {
+				display: none;
+			}
+		
+			input:checked ~ label:before,
+			&:not(:checked) > label:hover:before,
+			&:not(:checked) > label:hover ~ label:before { color: $star-on-color; }
+		}
 		
 		.comic-alt{
 		   p{
@@ -32,37 +63,7 @@ $star-off-color: #CCCCCC;
     }
 }  
 
-.comic_rating {
-	width:70%;
-	height: $star-size;
-    align-items: center;
-	justify-content: center;
-	
-	label {
-		float: right;
-		position: relative;
-		width: $star-size;
-		height: $star-size;
-        cursor: pointer;
 
-		&:not(:first-of-type) { padding-right: $star-spacing; }
-		
-		&:before {
-			content: "\2605";
-			font-size: $star-size + 2px;
-			color: $star-off-color;
-			line-height: 1;
-		}
-	}
-
-	input {
-		display: none;
-	}
-
-	input:checked ~ label:before,
-	&:not(:checked) > label:hover:before,
-	&:not(:checked) > label:hover ~ label:before { color: $star-on-color; }
-}
 
 .card { box-shadow: 0 16px 6px rgba(0,0,0,0.16), 0 10px 30px rgba(0,0,0,1); }
 .text-divider{ margin: 1em 0; line-height: 0; text-align: center;}

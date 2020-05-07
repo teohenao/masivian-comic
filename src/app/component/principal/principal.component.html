@@ -4,18 +4,20 @@
       <h1>{{comic.title}}</h1>
     </div>
     <div class="comic-date">
-    <h5 class="text-divider"><span id="published">published:</span><span>{{comic.year}}-{{comic.month}}-{{comic.day}}</span></h5>
+      <h5 class="text-divider"><span
+          id="published">published:</span><span>{{comic.year}}-{{comic.month}}-{{comic.day}}</span></h5>
     </div>
     <div class="comic-image">
-    <img src="{{comic.img}}" width="100%" height="500px">
+      <img src="{{comic.img}}" width="auto" height="auto">
     </div>
-    <div style="padding-bottom: 10px;" class="comic_rating">
-      <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
-      <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
-      <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
-      <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
-      <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
-  </div>
+      <div class="comic_rating">
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+      </div>
+  
     <div class="comic-alt">
       <p>{{comic.alt}}</p>
     </div>

@@ -28,11 +28,11 @@ $divider-border-bottom: 1px solid #f7f7f7;
 		border-radius: 15px;
 		display: inline-block;
 
-		.comic-title{padding-top: 20px;font-family:$font-comic;}
+		&-title{padding-top: 20px;font-family:$font-comic;}
 		
 		img{padding: 20px;}
 		
-		.comic-rating {
+		&-rating {
 			padding-bottom: 10px;
 			width:200px;
 			height: $star-size;
@@ -61,8 +61,8 @@ $divider-border-bottom: 1px solid #f7f7f7;
 			&:not(:checked) > label:hover ~ label:before { color: $star-on-color; }
 		}
 		
-		.comic-alt{ p { padding: 15px;width: 35em;margin: 0 auto; } }
-		.comic-random{ .btn-random{
+		&-alt{ p { padding: 15px;width: 35em;margin: 0 auto; } }
+		&-random{ .btn-random{
 				border-radius: 10px;
 				margin: 20px;
 				background-color: $btn-green; 
